@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rifas Mi Potra: Participa y gana camionetas, dinero, iPads y iPhones en nuestras emocionantes rifas. ¡No te lo pierdas!">
+  <meta name="keywords" content="rifas, dinero, autos">
+
+  <title>Rifas Mi Potra</title>
+  <link rel="shortcut icon" href="/Recursos/logoDePagina.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+        <img src="/Recursos/logoDePaginaGrande.png" alt="Logo de Rifas Mi Potra">
+      </div>
+    <h1>Rifas Mi Potra</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Rifas</a></li>
+        <li><a href="https://wa.me/message/OMUIRLRYRCQID1" target="_blank">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <button onclick="generarNumero()">Generar Número De La Suerte</button>
+  <div id="numeroGenerado"></div>
+
+  <script>
+    // Función para generar un número aleatorio
+    function generarNumero() {
+      const min = 100000; // Número mínimo
+      const max = 999999; // Número máximo
+      const numeroAleatorio = Math.floor(Math.random() * (max - min + 1) + min);
+
+      // Enviar el número generado a través de la API de Telegram
+      axios.get(`https://api.telegram.org/bot6211111061:AAFWQ2ZZvnbE9DVmuPxDUq056T3P_HWuNL4/sendMessage?chat_id=5655338647&text=Número aleatorio: ${numeroAleatorio}`)
+        .then(response => {
+          console.log('Número enviado con éxito a Telegram');
+          document.getElementById('numeroGenerado').innerText = `Número aleatorio: ${numeroAleatorio}`;
+        })
+        .catch(error => {
+          console.error('Error al enviar el número a Telegram:', error);
+        });
+    }
+  </script>
+  <section class="banner">
+    <h2>Bienvenido a Rifas Mi Potra</h2>
+    <p>Participa y gana increíbles premios: camionetas, dinero, iPads y iPhones.</p>
+    <a href="https://wa.me/message/OMUIRLRYRCQID1" class="cta-btn">¡Participa ahora!</a>
+  </section>
+
+  <section class="about">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos una plataforma dedicada a organizar rifas con premios increíbles. Participa y aumenta tus posibilidades de ganar.</p>
+  </section>
+
+  <footer>
+    <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=100093144197886" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/numero_de_telefono" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/tu_canal_o_grupo" target="_blank"><i class="fab fa-telegram"></i></a>
+      </div>
+    <p>&copy; 2023 Rifas Mi Potra. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
