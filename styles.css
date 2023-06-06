@@ -1,0 +1,175 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Estilos del encabezado */
+  header {
+    background-color: #000;
+    color: rgb( 219, 171, 70);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: xx-large;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: silver;
+    text-decoration: none;
+  }
+
+  /* Estilo al pasar el cursor sobre el enlace del menú */
+nav ul li a:hover {
+    color: rgb( 219, 171, 70); /* Cambia el color a oro */
+    font-weight: bold; /* Cambia el peso de la fuente a negrita */
+  }
+  
+  /* Estilos del botón */
+  button {
+    background-color: rgb( 219, 171, 70);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover{
+    background-color: gold;
+  }
+  
+  /* Estilos de las secciones */
+  section {
+    padding: 40px 0;
+  }
+  
+  .banner {
+    background-color: #f5f5f5;
+    text-align: center;
+  }
+  
+  .banner h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .banner p {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .cta-btn {
+    background-color: rgb( 219, 171, 70);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .cta-btn:hover{
+    background-color: gold;
+  }
+  
+  .about {
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer-icons {
+    margin-bottom: 10px;
+  }
+  
+  .footer-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .footer-icons a:hover {
+    color: #007bff;
+  }
+  
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+  }
+  
+  Puedes ajustar los colores, tamaños de fuente y márgenes según tus preferencias. Este estilo básico crea un fondo claro para el footer, alinea los íconos horizontalmente y les aplica un color de texto oscuro. Cuando se pasa el cursor sobre los íconos, el color se cambia a azul. El texto del pie de página se muestra en un tamaño de fuente más pequeño y color gris para darle un estilo más discreto.
+  
+
+  .logo-container {
+    width: 25vh;
+    height: auto; /* Ajusta la altura según tu logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #numeroGenerado {
+    background-color: #f2f2f2;
+    border: 1px solid silver;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .banner {
+    background-image: url('/Recursos/camioneta.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
